@@ -67,13 +67,14 @@
         function fetchBalance() {
             document.getElementById("continueButton").style.display = "none";
 
-            fetch('https://script.google.com/macros/s/AKfycbxWoatrrJsXWqUoWc9TeawL0WWV-y96-DI-fMfLNAfDE_SfZjirLsWhfcgwnJncXCviMQ/exec')
+            fetch('https://script.google.com/macros/s/AKfycbxND6mCqGf3Ta1JrP_hUThh6P8jEKuNOXuXK8c7DbtGCLZCGLVNOZPkjrrXDP2n8Ti3yg/exec')
                 .then(response => response.json())
                 .then(data => {
                     const display = `
 
                         <p>Phone: ${data.A2}</p>
                         <p>Balance: $ ${data.B2}</p>
+                        <p>Date: $ ${data.C2}</p>
                     `;
                     document.getElementById("balanceDisplay").innerHTML = display;
                     document.getElementById("balanceDisplay").style.display = "block";
