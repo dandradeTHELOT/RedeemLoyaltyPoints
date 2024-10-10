@@ -67,7 +67,7 @@
         function fetchBalance() {
             document.getElementById("continueButton").style.display = "none";
 
-            fetch('https://script.google.com/macros/s/AKfycbzC74T4GUSpOAKJYLr4dnLandLAL9mtfCBT4C7-t0il4F-G9yQYyEEgk1ZaPBt5EdjR8w/exec')
+            fetch('https://script.google.com/macros/s/AKfycbzcyOYb_jomtdlwrIvXo812er6zB3h-FZ84mEk6I1Da8RFVL_mLwuGxBhOpxK5jXjbXag/exec')
                 .then(response => response.json())
                 .then(data => {
                     const display = `
@@ -75,6 +75,7 @@
                         <p>Phone: ${data.A2}</p>
                         <p>Balance: $ ${data.B2}</p>
                         <p>Date: ${data.C2}</p>
+                        <p>Name: ${data.D2}</p>
                     `;
                     document.getElementById("balanceDisplay").innerHTML = display;
                     document.getElementById("balanceDisplay").style.display = "block";
